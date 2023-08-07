@@ -15,7 +15,15 @@
   },
   "main": "dist/commonjs/index.js",
   "module": "dist/modules/index.js",
-  "types": "dist/modules/index.d.ts",
+  "types": "dist/modules/index.d.js",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/modules/index.js",
+      "require": "./dist/commonjs/index.js",
+      "default": "./dist/modules/index.js"
+    }
+  },
   "peerDependencies": {
     "svelte": "^3.37.0 || ^4.0.0"
   },
